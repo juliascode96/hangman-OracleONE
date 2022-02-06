@@ -1,12 +1,12 @@
 var palabras = [
-    "python",
-	"javascript",
-	"java",
-	"html",
-	"css",
-	"kotlin",
-	"php",
-	"ruby"
+    "PHYTON",
+	"JAVASCRIPT",
+	"JAVA",
+	"HTML",
+	"CSS",
+	"KOTLIN",
+	"PHP",
+	"RUBY"
 ]
 
 const canvas = document.getElementById('ahorcado');
@@ -21,7 +21,7 @@ let adivinadas = [];
 let estadoPalabra = null;
 
 function agregarPalabra() {
-    palabras.push(document.getElementById('palabra').value);
+    palabras.push(document.getElementById('palabra').value.toUpperCase());
     document.getElementById('palabra').value = "";
     console.log(palabras);
 }
@@ -31,7 +31,7 @@ function elegirPalabra(){
 }
 
 function generarTeclado() {
-    let botonesHTML = "qwertyuiopasdfghjklñzxcvbnm".split('').map(letra =>
+    let botonesHTML = "QWERTYUIOPASDFGHJKLÑZXCVBNM".split('').map(letra =>
         `
         <button
           class="btn btn-lg btn-info m-2"
@@ -144,4 +144,3 @@ function nuevoJuego() {
 }
 
 document.getElementById('agregar').addEventListener('click', agregarPalabra);
-nuevoJuego();

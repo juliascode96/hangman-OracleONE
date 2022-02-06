@@ -14,14 +14,17 @@
 <body>
     <div class="container">
         <div class="text-center">
+            <h1 class="text-center">El ahorcado</h1>
             <form onsubmit="return false">
                 <label for="">Agregue una palabra al juego</label><br>
                 <input type="text" name="palabra" id="palabra"><br><br>
                 <button id="agregar" class="btn btn-secondary">Agregar</button>
             </form>
+            <br>
+            <br>
+                <button id="agregar" class="btn btn-secondary" onclick="nuevoJuego()">Iniciar Juego</button>
         </div>
        <br>
-        <h1 class="text-center">El ahorcado</h1>
         <br>
         <div class="float-right">Errores: <span id="errores"></span> de <span id="maximo"></span></div>
         <br>
